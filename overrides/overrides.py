@@ -89,7 +89,7 @@ if sys.version < '3.6':
         ext_arg = 0
         while i[0] <= max:
             op = next()
-            if op > dis.HAVE_ARGUMENT:
+            if op >= dis.HAVE_ARGUMENT:
                 arg = next() + (next() << 8)
             else:
                 assert ext_arg == 0
